@@ -68,26 +68,42 @@ CIRCUIT DIAGRAM
 
 **PROGRAM** 
  
+```ino
+int LED_PIN = 7;
+#define POTENTIOMETER_PIN A0
+
+void setup()
+{
+  pinMode(LED_PIN, OUTPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  
+  int potentiometerValue = analogRead(POTENTIOMETER_PIN);
+  int brightness = potentiometerValue /4;
+  Serial.println(potentiometerValue);
+  delay(200);
+  analogWrite(LED_PIN, brightness);
+}
+
+```
 
 
 
 
+![2nd serial](https://github.com/nagaraj6618/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/127173574/882f7a30-95b0-471e-bc78-64e507faa7af)
 
 
 
 
-
-**
 **Simulation output:** 
-**
+
+![2nd circuit](https://github.com/nagaraj6618/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/127173574/75ca3f34-954f-450a-ba69-6c0941bee746)
 
 
-[My image](username.github.com/repository/img/image.jpg)
+![2nd exp](https://github.com/nagaraj6618/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/127173574/2fb66fe8-3fa1-4a3c-99c1-700374f1d550)
 
 
-
-
-
-
-
-**RESULT: ** Arduino uno analog input functioning is learned and interfaced with digital input switch .
+**RESULT:** Arduino uno analog input functioning is learned and interfaced with digital input switch .
